@@ -14,6 +14,8 @@ WORKDIR /usr/app
 # this way it saves a cache version of the container and it wont
 # install all packages every time there is a change to the other files
 # we need to COPY the json file because the container has no idea of the existance of the file
+# the COPY keyword moves the file from the host to the container
+# if we do    COPY ./ ./     it will copy the whole folder
 COPY ./package.json ./
 RUN npm install 
 # COPY = "./local machine" to "./container"
