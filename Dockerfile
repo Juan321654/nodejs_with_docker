@@ -13,12 +13,13 @@ WORKDIR /usr/app
 # npm install (package.json) will only run if there are changes to it
 # this way it saves a cache version of the container and it wont
 # install all packages every time there is a change to the other files
-# we need to COPY the json file because the container has no idea of the existance of the file
-# the COPY keyword moves the file from the host to the container
-# if we do    COPY ./ ./     it will copy the whole folder
 COPY ./package.json ./
 RUN npm install 
-# COPY = "./local machine" to "./container"
+# now that a cache version of the container is created, when we do "docker run"
+# it will use the cache version and not install all packages again
+
+# now we can do changes to our index.js and other files and the 'npm install' will only run
+# if we add other dependencies to it or any changes to the package.json
 COPY ./ ./
 
 
