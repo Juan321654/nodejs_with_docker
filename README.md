@@ -14,6 +14,7 @@ Ports do not have to be identical `5000:8080`, or `3000:8080` etc
 if we make the port `5000:8080` then when we go to our browser we would use `localhost:5000`
 
 
-`docker run -p 8080:8080 username/name_of_project`
+`docker run -p 5000:8080 username/name_of_project`
 
-<img src="/Screenshot_1.png">
+<img src="/gitImages/Screenshot_1.png">
+<img src="/gitImages/Screenshot_2.png">
