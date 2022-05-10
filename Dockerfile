@@ -13,6 +13,7 @@ WORKDIR /usr/app
 # npm install (package.json) will only run if there are changes to it
 # this way it saves a cache version of the container and it wont
 # install all packages every time there is a change to the other files
+# we need to COPY the json file because the container has no idea of the existance of the file
 COPY ./package.json ./
 RUN npm install 
 # COPY = "./local machine" to "./container"
