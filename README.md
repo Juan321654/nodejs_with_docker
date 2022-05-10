@@ -23,5 +23,6 @@ if we make the port `5000:8080` then when we go to our browser we would use `loc
 `docker run -it username/name_of_project sh`
 
 notice that the current working directory is `/usr/app` because that's what we specified in the Dockerfile, to prevent conflicts on filenames in the root directory
+
 <img src="/gitImages/Screenshot_4.png">
 <img src="/gitImages/Screenshot_3.png">
