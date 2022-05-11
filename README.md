@@ -42,3 +42,7 @@ add `-e ENV_NAME=VALUE`
 `docker run -p 5001:3001 -e PORT=3001 username/name_of_project`
 
 <img src="/gitImages/Screenshot_5.png">
+
+# stop all running container
+
+`docker stop $(docker ps -a -q)`
