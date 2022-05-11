@@ -1,6 +1,6 @@
 # How to use the build command in Docker
 
-convention to name the container, not required
+convention to name the container, not required, could be named anything you want, does not require username
 
 `docker build -t username/name_of_project .`
 
@@ -26,3 +26,19 @@ notice that the current working directory is `/usr/app` because that's what we s
 
 <img src="/gitImages/Screenshot_4.png">
 <img src="/gitImages/Screenshot_3.png">
+
+# Environment variables
+
+create a file (does not need a file name, just the extension is ok)
+
+`.env`
+
+ex: 
+PORT=3000
+
+running the docker command
+add `-e ENV_NAME=VALUE`
+
+`docker run -p 5001:3001 -e PORT=3001 username/name_of_project`
+
+<img src="/gitImages/Screenshot_5.png">
